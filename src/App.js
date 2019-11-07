@@ -10,10 +10,9 @@ function App() {
         Tweeta
       </h1>
 
-      <Message />
-      <Message />
-      <Message />
-      <Message />
+      <Message user="Yo" text="Mi texto" />
+      <Message user="Tu" text="Tu texto" />
+      <Message user="El" text="Su texto" />
 
     </div>
   );

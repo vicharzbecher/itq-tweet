@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Message() {
+function Message({ user, text }) {
     return (
         <div className="message-container">
             <div className="message">
-            <div className="user" >Yo</div>
-            <div className="text" >Este es el texto del tweet</div>
+            <div className="user" >{user}</div>
+            <div className="text" >{text}</div>
             </div>
         </div>
     );
