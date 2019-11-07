@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Message from './Message'
 
 function App() {
   return (
@@ -8,12 +9,12 @@ function App() {
       <h1 className="page-title">
         Tweeta
       </h1>
-      <div className="message-container">
-        <div className="message">
-          <div className="user" >Yo</div>
-          <div className="text" >Este es el texto del tweet</div>
-        </div>
-      </div>
+
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+
     </div>
   );
 }
