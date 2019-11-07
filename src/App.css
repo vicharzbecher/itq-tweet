@@ -17,6 +17,38 @@
   color: white;
 }
 
+.page-title {
+  margin-left: 20px;
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+.message-container {
+  display: flex;
+  margin: 20px;
+}
+
+.message {
+  border: 1px solid rgb(230, 236, 240);
+  background-color: #ffffff;
+  border-bottom: 1px solid #4D7298;;
+  padding: 10px;
+}
+
+.message .user {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px dashed #4D7298;
+  font-weight: bold;
+}
+
+.message .text  {
+  padding: 5px;
+  text-align: left;
+}
+
+body {
+  background-color: rgb(230, 236, 240);;
 }

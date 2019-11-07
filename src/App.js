@@ -3,16 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-
-  // return (
-  //   React.createElement('div', { className: "App" },
-  //     React.createElement('p', {}, "Hola")
-  //   )
-  // );
-
   return (
-    <div className="App">
-      <p>Hola</p>
+    <div>
+      <h1 className="page-title">
+        Tweeta
+      </h1>
+      <div className="message-container">
+        <div className="message">
+          <div className="user" >Yo</div>
+          <div className="text" >Este es el texto del tweet</div>
+        </div>
+      </div>
     </div>
   );
 }
