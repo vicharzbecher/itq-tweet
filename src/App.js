@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     loadData();
-  }, [messages]);
+  }, []);
 
 
   return (
