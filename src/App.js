@@ -3,20 +3,35 @@ import { useState, useEffect } from 'react';
 import './App.css';
 //import Editor from './Editor'
 import Message from './Message'
+import Editor from './Editor';
 
-const host = 'http://localhost:8080'
+const host = 'http://localhost:8080';
+export const user = 'vic';
 
 function App() {
 
   const [messages, setMessages] = useState([]);
 
   async function loadData() {
-    fetch(`${host}/api/tweets/`, {
+    await fetch(`${host}/api/tweets/`, {
       method: "GET"
     }).then((response) => {
       return response.json();
     }).then((result) => {
       setMessages(result);
+    });
+  }
+
+  async function saveMessage (text) {
+    fetch(`${host}/api/tweets/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "user": user,
+            "text": text
+        })
     });
   }
 
@@ -29,7 +44,7 @@ function App() {
     < div >
 
       <h1 className="page-title">Tweeta</h1>
-
+      <Editor handleSave={saveMessage}/>
       {
         messages.map((message) => {
           return (
