@@ -41,6 +41,14 @@ function App() {
     loadData();
   }, []);
 
+  async function deleteMessage (id) {
+    fetch(`${host}/api/tweets/${id}`, {
+      method: "DELETE"
+    }).then(() =>{
+      loadData();
+    });
+  }
+
 
   return (
     < div >
@@ -50,7 +58,7 @@ function App() {
       {
         messages.map((message, key) => {
           return (
-            <Message user={message.user} text={message.text} key={key}/>
+            <Message user={message.user} text={message.text} key={key} listId={key} handleDelete={deleteMessage} />
           );
         })
       }
