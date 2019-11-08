@@ -48,9 +48,9 @@ function App() {
       <h1 className="page-title">Tweeta</h1>
       <Editor handleSave={saveMessage}/>
       {
-        messages.map((message) => {
+        messages.map((message, key) => {
           return (
-            <Message user={message.user} text={message.text} />
+            <Message user={message.user} text={message.text} key={key}/>
           );
         })
       }
