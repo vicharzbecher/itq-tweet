@@ -6,7 +6,7 @@ import Message from './Message'
 import Editor from './Editor';
 
 const host = 'http://localhost:8080';
-export const user = 'vic';
+const user = 'vic';
 
 function App() {
 
@@ -32,6 +32,8 @@ function App() {
             "user": user,
             "text": text
         })
+    }).then(() =>{
+      loadData();
     });
   }
 
